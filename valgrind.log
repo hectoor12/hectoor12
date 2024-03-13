@@ -1,0 +1,408 @@
+==14865== Memcheck, a memory error detector
+==14865== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==14865== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==14865== Command: ./voting 10 10
+==14865== Parent PID: 14863
+==14865== 
+==14872== 
+==14872== HEAP SUMMARY:
+==14872==     in use at exit: 543 bytes in 3 blocks
+==14872==   total heap usage: 245 allocs, 242 frees, 545,713 bytes allocated
+==14872== 
+==14872== 24 bytes in 1 blocks are still reachable in loss record 1 of 3
+==14872==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==14872==    by 0x498DF34: tsearch (tsearch.c:337)
+==14872==    by 0x490A7A1: __sem_check_add_mapping (sem_routines.c:121)
+==14872==    by 0x490A43B: sem_open@@GLIBC_2.34 (sem_open.c:192)
+==14872==    by 0x109D03: principal (voting.c:182)
+==14872==    by 0x10A2FF: main (voting.c:270)
+==14872== 
+==14872== 47 bytes in 1 blocks are still reachable in loss record 2 of 3
+==14872==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==14872==    by 0x490A728: __sem_check_add_mapping (sem_routines.c:104)
+==14872==    by 0x490A43B: sem_open@@GLIBC_2.34 (sem_open.c:192)
+==14872==    by 0x109D03: principal (voting.c:182)
+==14872==    by 0x10A2FF: main (voting.c:270)
+==14872== 
+==14872== 472 bytes in 1 blocks are still reachable in loss record 3 of 3
+==14872==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==14872==    by 0x48ED64D: __fopen_internal (iofopen.c:65)
+==14872==    by 0x48ED64D: fopen@@GLIBC_2.2.5 (iofopen.c:86)
+==14872==    by 0x1096A4: candidato (voting.c:74)
+==14872==    by 0x109EBF: principal (voting.c:212)
+==14872==    by 0x10A2FF: main (voting.c:270)
+==14872== 
+==14872== LEAK SUMMARY:
+==14872==    definitely lost: 0 bytes in 0 blocks
+==14872==    indirectly lost: 0 bytes in 0 blocks
+==14872==      possibly lost: 0 bytes in 0 blocks
+==14872==    still reachable: 543 bytes in 3 blocks
+==14872==         suppressed: 0 bytes in 0 blocks
+==14872== 
+==14872== For lists of detected and suppressed errors, rerun with: -s
+==14872== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==14865== 
+==14865== HEAP SUMMARY:
+==14865==     in use at exit: 112 bytes in 3 blocks
+==14865==   total heap usage: 6 allocs, 3 frees, 5,152 bytes allocated
+==14865== 
+==14875== 
+==14875== HEAP SUMMARY:
+==14875==     in use at exit: 112 bytes in 3 blocks
+==14875==   total heap usage: 7 allocs, 4 frees, 2,121 bytes allocated
+==14875== 
+==14873== 
+==14873== HEAP SUMMARY:
+==14873==     in use at exit: 543 bytes in 3 blocks
+==14873==   total heap usage: 245 allocs, 242 frees, 545,713 bytes allocated
+==14873== 
+==14871== 
+==14871== HEAP SUMMARY:
+==14871==     in use at exit: 543 bytes in 3 blocks
+==14871==   total heap usage: 245 allocs, 242 frees, 545,713 bytes allocated
+==14871== 
+==14866== 
+==14866== HEAP SUMMARY:
+==14866==     in use at exit: 543 bytes in 3 blocks
+==14866==   total heap usage: 245 allocs, 242 frees, 545,713 bytes allocated
+==14866== 
+==14875== 24 bytes in 1 blocks are still reachable in loss record 1 of 3
+==14875==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==14875==    by 0x498DF34: tsearch (tsearch.c:337)
+==14875==    by 0x490A7A1: __sem_check_add_mapping (sem_routines.c:121)
+==14875==    by 0x490A43B: sem_open@@GLIBC_2.34 (sem_open.c:192)
+==14875==    by 0x109D03: principal (voting.c:182)
+==14875==    by 0x10A2FF: main (voting.c:270)
+==14875== 
+==14875== 41 bytes in 1 blocks are still reachable in loss record 2 of 3
+==14875==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==14875==    by 0x109671: candidato (voting.c:68)
+==14873== 24 bytes in 1 blocks are still reachable in loss record 1 of 3
+==14875==    by 0x109EBF: principal (voting.c:212)
+==14875==    by 0x10A2FF: main (voting.c:270)
+==14875== 
+==14875== 47 bytes in 1 blocks are still reachable in loss record 3 of 3
+==14875==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==14873==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==14875==    by 0x490A728: __sem_check_add_mapping (sem_routines.c:104)
+==14871== 24 bytes in 1 blocks are still reachable in loss record 1 of 3
+==14873==    by 0x498DF34: tsearch (tsearch.c:337)
+==14875==    by 0x490A43B: sem_open@@GLIBC_2.34 (sem_open.c:192)
+==14873==    by 0x490A7A1: __sem_check_add_mapping (sem_routines.c:121)
+==14875==    by 0x109D03: principal (voting.c:182)
+==14873==    by 0x490A43B: sem_open@@GLIBC_2.34 (sem_open.c:192)
+==14875==    by 0x10A2FF: main (voting.c:270)
+==14873==    by 0x109D03: principal (voting.c:182)
+==14875== 
+==14871==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==14873==    by 0x10A2FF: main (voting.c:270)
+==14875== LEAK SUMMARY:
+==14874== 
+==14868== 
+==14871==    by 0x498DF34: tsearch (tsearch.c:337)
+==14873== 
+==14875==    definitely lost: 0 bytes in 0 blocks
+==14874== HEAP SUMMARY:
+==14874==     in use at exit: 543 bytes in 3 blocks
+==14874==   total heap usage: 245 allocs, 242 frees, 545,713 bytes allocated
+==14874== 
+==14866== 24 bytes in 1 blocks are still reachable in loss record 1 of 3
+==14868== HEAP SUMMARY:
+==14868==     in use at exit: 543 bytes in 3 blocks
+==14868==   total heap usage: 245 allocs, 242 frees, 545,713 bytes allocated
+==14868== 
+==14871==    by 0x490A7A1: __sem_check_add_mapping (sem_routines.c:121)
+==14873== 47 bytes in 1 blocks are still reachable in loss record 2 of 3
+==14875==    indirectly lost: 0 bytes in 0 blocks
+==14871==    by 0x490A43B: sem_open@@GLIBC_2.34 (sem_open.c:192)
+==14873==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==14875==      possibly lost: 0 bytes in 0 blocks
+==14871==    by 0x109D03: principal (voting.c:182)
+==14873==    by 0x490A728: __sem_check_add_mapping (sem_routines.c:104)
+==14866==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==14875==    still reachable: 112 bytes in 3 blocks
+==14871==    by 0x10A2FF: main (voting.c:270)
+==14873==    by 0x490A43B: sem_open@@GLIBC_2.34 (sem_open.c:192)
+==14875==         suppressed: 0 bytes in 0 blocks
+==14866==    by 0x498DF34: tsearch (tsearch.c:337)
+==14871== 
+==14873==    by 0x109D03: principal (voting.c:182)
+==14875== 
+==14866==    by 0x490A7A1: __sem_check_add_mapping (sem_routines.c:121)
+==14873==    by 0x10A2FF: main (voting.c:270)
+==14875== For lists of detected and suppressed errors, rerun with: -s
+==14871== 47 bytes in 1 blocks are still reachable in loss record 2 of 3
+==14866==    by 0x490A43B: sem_open@@GLIBC_2.34 (sem_open.c:192)
+==14873== 
+==14875== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==14871==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==14866==    by 0x109D03: principal (voting.c:182)
+==14867== 
+==14871==    by 0x490A728: __sem_check_add_mapping (sem_routines.c:104)
+==14866==    by 0x10A2FF: main (voting.c:270)
+==14873== 472 bytes in 1 blocks are still reachable in loss record 3 of 3
+==14871==    by 0x490A43B: sem_open@@GLIBC_2.34 (sem_open.c:192)
+==14867== HEAP SUMMARY:
+==14867==     in use at exit: 543 bytes in 3 blocks
+==14867==   total heap usage: 245 allocs, 242 frees, 545,713 bytes allocated
+==14867== 
+==14866== 
+==14873==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==14871==    by 0x109D03: principal (voting.c:182)
+==14866== 47 bytes in 1 blocks are still reachable in loss record 2 of 3
+==14873==    by 0x48ED64D: __fopen_internal (iofopen.c:65)
+==14871==    by 0x10A2FF: main (voting.c:270)
+==14866==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==14873==    by 0x48ED64D: fopen@@GLIBC_2.2.5 (iofopen.c:86)
+==14871== 
+==14866==    by 0x490A728: __sem_check_add_mapping (sem_routines.c:104)
+==14873==    by 0x1096A4: candidato (voting.c:74)
+==14866==    by 0x490A43B: sem_open@@GLIBC_2.34 (sem_open.c:192)
+==14873==    by 0x109EBF: principal (voting.c:212)
+==14866==    by 0x109D03: principal (voting.c:182)
+==14871== 472 bytes in 1 blocks are still reachable in loss record 3 of 3
+==14873==    by 0x10A2FF: main (voting.c:270)
+==14866==    by 0x10A2FF: main (voting.c:270)
+==14871==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==14873== 
+==14866== 
+==14871==    by 0x48ED64D: __fopen_internal (iofopen.c:65)
+==14873== LEAK SUMMARY:
+==14871==    by 0x48ED64D: fopen@@GLIBC_2.2.5 (iofopen.c:86)
+==14873==    definitely lost: 0 bytes in 0 blocks
+==14871==    by 0x1096A4: candidato (voting.c:74)
+==14866== 472 bytes in 1 blocks are still reachable in loss record 3 of 3
+==14873==    indirectly lost: 0 bytes in 0 blocks
+==14871==    by 0x109EBF: principal (voting.c:212)
+==14866==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==14873==      possibly lost: 0 bytes in 0 blocks
+==14871==    by 0x10A2FF: main (voting.c:270)
+==14866==    by 0x48ED64D: __fopen_internal (iofopen.c:65)
+==14873==    still reachable: 543 bytes in 3 blocks
+==14871== 
+==14866==    by 0x48ED64D: fopen@@GLIBC_2.2.5 (iofopen.c:86)
+==14873==         suppressed: 0 bytes in 0 blocks
+==14871== LEAK SUMMARY:
+==14866==    by 0x1096A4: candidato (voting.c:74)
+==14873== 
+==14871==    definitely lost: 0 bytes in 0 blocks
+==14866==    by 0x109EBF: principal (voting.c:212)
+==14873== For lists of detected and suppressed errors, rerun with: -s
+==14871==    indirectly lost: 0 bytes in 0 blocks
+==14866==    by 0x10A2FF: main (voting.c:270)
+==14873== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==14871==      possibly lost: 0 bytes in 0 blocks
+==14866== 
+==14871==    still reachable: 543 bytes in 3 blocks
+==14866== LEAK SUMMARY:
+==14871==         suppressed: 0 bytes in 0 blocks
+==14866==    definitely lost: 0 bytes in 0 blocks
+==14871== 
+==14866==    indirectly lost: 0 bytes in 0 blocks
+==14871== For lists of detected and suppressed errors, rerun with: -s
+==14866==      possibly lost: 0 bytes in 0 blocks
+==14871== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==14866==    still reachable: 543 bytes in 3 blocks
+==14866==         suppressed: 0 bytes in 0 blocks
+==14866== 
+==14866== For lists of detected and suppressed errors, rerun with: -s
+==14866== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==14868== 24 bytes in 1 blocks are still reachable in loss record 1 of 3
+==14874== 24 bytes in 1 blocks are still reachable in loss record 1 of 3
+==14868==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==14874==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==14868==    by 0x498DF34: tsearch (tsearch.c:337)
+==14874==    by 0x498DF34: tsearch (tsearch.c:337)
+==14867== 24 bytes in 1 blocks are still reachable in loss record 1 of 3
+==14868==    by 0x490A7A1: __sem_check_add_mapping (sem_routines.c:121)
+==14874==    by 0x490A7A1: __sem_check_add_mapping (sem_routines.c:121)
+==14868==    by 0x490A43B: sem_open@@GLIBC_2.34 (sem_open.c:192)
+==14874==    by 0x490A43B: sem_open@@GLIBC_2.34 (sem_open.c:192)
+==14868==    by 0x109D03: principal (voting.c:182)
+==14874==    by 0x109D03: principal (voting.c:182)
+==14867==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==14868==    by 0x10A2FF: main (voting.c:270)
+==14874==    by 0x10A2FF: main (voting.c:270)
+==14867==    by 0x498DF34: tsearch (tsearch.c:337)
+==14868== 
+==14874== 
+==14867==    by 0x490A7A1: __sem_check_add_mapping (sem_routines.c:121)
+==14868== 47 bytes in 1 blocks are still reachable in loss record 2 of 3
+==14874== 47 bytes in 1 blocks are still reachable in loss record 2 of 3
+==14867==    by 0x490A43B: sem_open@@GLIBC_2.34 (sem_open.c:192)
+==14868==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==14874==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==14867==    by 0x109D03: principal (voting.c:182)
+==14868==    by 0x490A728: __sem_check_add_mapping (sem_routines.c:104)
+==14874==    by 0x490A728: __sem_check_add_mapping (sem_routines.c:104)
+==14867==    by 0x10A2FF: main (voting.c:270)
+==14868==    by 0x490A43B: sem_open@@GLIBC_2.34 (sem_open.c:192)
+==14874==    by 0x490A43B: sem_open@@GLIBC_2.34 (sem_open.c:192)
+==14867== 
+==14868==    by 0x109D03: principal (voting.c:182)
+==14874==    by 0x109D03: principal (voting.c:182)
+==14868==    by 0x10A2FF: main (voting.c:270)
+==14867== 47 bytes in 1 blocks are still reachable in loss record 2 of 3
+==14874==    by 0x10A2FF: main (voting.c:270)
+==14868== 
+==14867==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==14874== 
+==14867==    by 0x490A728: __sem_check_add_mapping (sem_routines.c:104)
+==14868== 472 bytes in 1 blocks are still reachable in loss record 3 of 3
+==14867==    by 0x490A43B: sem_open@@GLIBC_2.34 (sem_open.c:192)
+==14874== 472 bytes in 1 blocks are still reachable in loss record 3 of 3
+==14868==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==14867==    by 0x109D03: principal (voting.c:182)
+==14874==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==14868==    by 0x48ED64D: __fopen_internal (iofopen.c:65)
+==14867==    by 0x10A2FF: main (voting.c:270)
+==14874==    by 0x48ED64D: __fopen_internal (iofopen.c:65)
+==14868==    by 0x48ED64D: fopen@@GLIBC_2.2.5 (iofopen.c:86)
+==14867== 
+==14874==    by 0x48ED64D: fopen@@GLIBC_2.2.5 (iofopen.c:86)
+==14868==    by 0x1096A4: candidato (voting.c:74)
+==14874==    by 0x1096A4: candidato (voting.c:74)
+==14868==    by 0x109EBF: principal (voting.c:212)
+==14867== 472 bytes in 1 blocks are still reachable in loss record 3 of 3
+==14874==    by 0x109EBF: principal (voting.c:212)
+==14868==    by 0x10A2FF: main (voting.c:270)
+==14867==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==14874==    by 0x10A2FF: main (voting.c:270)
+==14868== 
+==14867==    by 0x48ED64D: __fopen_internal (iofopen.c:65)
+==14874== 
+==14868== LEAK SUMMARY:
+==14868==    definitely lost: 0 bytes in 0 blocks
+==14874== LEAK SUMMARY:
+==14868==    indirectly lost: 0 bytes in 0 blocks
+==14874==    definitely lost: 0 bytes in 0 blocks
+==14868==      possibly lost: 0 bytes in 0 blocks
+==14874==    indirectly lost: 0 bytes in 0 blocks
+==14868==    still reachable: 543 bytes in 3 blocks
+==14874==      possibly lost: 0 bytes in 0 blocks
+==14868==         suppressed: 0 bytes in 0 blocks
+==14874==    still reachable: 543 bytes in 3 blocks
+==14868== 
+==14874==         suppressed: 0 bytes in 0 blocks
+==14868== For lists of detected and suppressed errors, rerun with: -s
+==14874== 
+==14868== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==14865== 24 bytes in 1 blocks are still reachable in loss record 1 of 3
+==14874== For lists of detected and suppressed errors, rerun with: -s
+==14874== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==14867==    by 0x48ED64D: fopen@@GLIBC_2.2.5 (iofopen.c:86)
+==14867==    by 0x1096A4: candidato (voting.c:74)
+==14867==    by 0x109EBF: principal (voting.c:212)
+==14867==    by 0x10A2FF: main (voting.c:270)
+==14867== 
+==14867== LEAK SUMMARY:
+==14867==    definitely lost: 0 bytes in 0 blocks
+==14867==    indirectly lost: 0 bytes in 0 blocks
+==14867==      possibly lost: 0 bytes in 0 blocks
+==14867==    still reachable: 543 bytes in 3 blocks
+==14867==         suppressed: 0 bytes in 0 blocks
+==14867== 
+==14867== For lists of detected and suppressed errors, rerun with: -s
+==14867== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==14869== 
+==14869== HEAP SUMMARY:
+==14869==     in use at exit: 543 bytes in 3 blocks
+==14869==   total heap usage: 245 allocs, 242 frees, 545,713 bytes allocated
+==14869== 
+==14865==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==14865==    by 0x498DF34: tsearch (tsearch.c:337)
+==14865==    by 0x490A7A1: __sem_check_add_mapping (sem_routines.c:121)
+==14865==    by 0x490A43B: sem_open@@GLIBC_2.34 (sem_open.c:192)
+==14865==    by 0x109D03: principal (voting.c:182)
+==14865==    by 0x10A2FF: main (voting.c:270)
+==14865== 
+==14865== 41 bytes in 1 blocks are still reachable in loss record 2 of 3
+==14865==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==14865==    by 0x109CB6: principal (voting.c:175)
+==14865==    by 0x10A2FF: main (voting.c:270)
+==14865== 
+==14870== 
+==14865== 47 bytes in 1 blocks are still reachable in loss record 3 of 3
+==14865==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==14870== HEAP SUMMARY:
+==14870==     in use at exit: 543 bytes in 3 blocks
+==14870==   total heap usage: 247 allocs, 244 frees, 550,281 bytes allocated
+==14870== 
+==14865==    by 0x490A728: __sem_check_add_mapping (sem_routines.c:104)
+==14865==    by 0x490A43B: sem_open@@GLIBC_2.34 (sem_open.c:192)
+==14865==    by 0x109D03: principal (voting.c:182)
+==14865==    by 0x10A2FF: main (voting.c:270)
+==14865== 
+==14865== LEAK SUMMARY:
+==14865==    definitely lost: 0 bytes in 0 blocks
+==14865==    indirectly lost: 0 bytes in 0 blocks
+==14865==      possibly lost: 0 bytes in 0 blocks
+==14865==    still reachable: 112 bytes in 3 blocks
+==14865==         suppressed: 0 bytes in 0 blocks
+==14865== 
+==14865== For lists of detected and suppressed errors, rerun with: -s
+==14865== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==14870== 24 bytes in 1 blocks are still reachable in loss record 1 of 3
+==14870==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==14870==    by 0x498DF34: tsearch (tsearch.c:337)
+==14870==    by 0x490A7A1: __sem_check_add_mapping (sem_routines.c:121)
+==14870==    by 0x490A43B: sem_open@@GLIBC_2.34 (sem_open.c:192)
+==14870==    by 0x109D03: principal (voting.c:182)
+==14870==    by 0x10A2FF: main (voting.c:270)
+==14870== 
+==14870== 47 bytes in 1 blocks are still reachable in loss record 2 of 3
+==14870==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==14870==    by 0x490A728: __sem_check_add_mapping (sem_routines.c:104)
+==14870==    by 0x490A43B: sem_open@@GLIBC_2.34 (sem_open.c:192)
+==14870==    by 0x109D03: principal (voting.c:182)
+==14870==    by 0x10A2FF: main (voting.c:270)
+==14870== 
+==14870== 472 bytes in 1 blocks are still reachable in loss record 3 of 3
+==14870==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==14870==    by 0x48ED64D: __fopen_internal (iofopen.c:65)
+==14870==    by 0x48ED64D: fopen@@GLIBC_2.2.5 (iofopen.c:86)
+==14870==    by 0x1096A4: candidato (voting.c:74)
+==14870==    by 0x109EBF: principal (voting.c:212)
+==14870==    by 0x10A2FF: main (voting.c:270)
+==14870== 
+==14870== LEAK SUMMARY:
+==14870==    definitely lost: 0 bytes in 0 blocks
+==14870==    indirectly lost: 0 bytes in 0 blocks
+==14870==      possibly lost: 0 bytes in 0 blocks
+==14870==    still reachable: 543 bytes in 3 blocks
+==14870==         suppressed: 0 bytes in 0 blocks
+==14870== 
+==14870== For lists of detected and suppressed errors, rerun with: -s
+==14870== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+==14869== 24 bytes in 1 blocks are still reachable in loss record 1 of 3
+==14869==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==14869==    by 0x498DF34: tsearch (tsearch.c:337)
+==14869==    by 0x490A7A1: __sem_check_add_mapping (sem_routines.c:121)
+==14869==    by 0x490A43B: sem_open@@GLIBC_2.34 (sem_open.c:192)
+==14869==    by 0x109D03: principal (voting.c:182)
+==14869==    by 0x10A2FF: main (voting.c:270)
+==14869== 
+==14869== 47 bytes in 1 blocks are still reachable in loss record 2 of 3
+==14869==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==14869==    by 0x490A728: __sem_check_add_mapping (sem_routines.c:104)
+==14869==    by 0x490A43B: sem_open@@GLIBC_2.34 (sem_open.c:192)
+==14869==    by 0x109D03: principal (voting.c:182)
+==14869==    by 0x10A2FF: main (voting.c:270)
+==14869== 
+==14869== 472 bytes in 1 blocks are still reachable in loss record 3 of 3
+==14869==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==14869==    by 0x48ED64D: __fopen_internal (iofopen.c:65)
+==14869==    by 0x48ED64D: fopen@@GLIBC_2.2.5 (iofopen.c:86)
+==14869==    by 0x1096A4: candidato (voting.c:74)
+==14869==    by 0x109EBF: principal (voting.c:212)
+==14869==    by 0x10A2FF: main (voting.c:270)
+==14869== 
+==14869== LEAK SUMMARY:
+==14869==    definitely lost: 0 bytes in 0 blocks
+==14869==    indirectly lost: 0 bytes in 0 blocks
+==14869==      possibly lost: 0 bytes in 0 blocks
+==14869==    still reachable: 543 bytes in 3 blocks
+==14869==         suppressed: 0 bytes in 0 blocks
+==14869== 
+==14869== For lists of detected and suppressed errors, rerun with: -s
+==14869== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
